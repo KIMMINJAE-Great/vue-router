@@ -30,35 +30,52 @@ export default {
   name: "ToLogin",
   setup() {
     const title = ref("Login");
+    const frmLogin = ref("")
+    const id = ref("")
+    const pass = ref("")
+
+  const login =function(){
+        if(id.value.value =="" || id.value.value==undefined){
+          alert('ID(을)를 확인해주세요')
+          return
+        }
+        if(pass.value.value == "" || pass.value.value == undefined){
+          alert('Password(을)를 확인해주세요')
+          console.log(pass.value.value);
+          return
+        }
+  frmLogin.value.submit()
+  }
+
     
     const goJoin = function(){
       location.href="Join"
     }
-    return { title, goJoin };
+    return { title, goJoin, frmLogin, id, pass, login  };
   },
-  data(){
-    return{
+  // data(){
+  //   return{
         
-    }
-  },
-  methods:{
-    login(){
-      const frmLogin = this.$refs.frmLogin;
-      const id = this.$refs.id;
-      const pass = this.$refs.pass;
+  //   }
+  // },
+  // methods:{
+  //   login(){
+  //     const frmLogin = this.$refs.frmLogin;
+  //     const id = this.$refs.id;
+  //     const pass = this.$refs.pass;
 
-      if(id.value =="" || id==undefined){
-          alert('ID(을)를 확인해주세요')
-          return
-        }
-        if(pass.value =="" || pass==undefined){
-          alert('Passwrod(을)를 확인해주세요')
-          return
-        }
+  //     if(id.value =="" || id==undefined){
+  //         alert('ID(을)를 확인해주세요')
+  //         return
+  //       }
+  //       if(pass.value =="" || pass==undefined){
+  //         alert('Passwrod(을)를 확인해주세요')
+  //         return
+  //       }
 
-        frmLogin.submit();
-    }
-  }
+  //       frmLogin.submit();
+  //   }
+  // }
 };
 </script>
 
