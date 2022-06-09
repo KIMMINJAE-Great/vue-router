@@ -3,7 +3,7 @@
   
     <div id="homebox">
     
-     <p id="homepage">Wellcome to Page</p>
+     <p id="homepage">Welcome to Page</p>
     </div>
    
 </template>

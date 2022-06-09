@@ -7,23 +7,23 @@
       <legend>Join</legend>
         <div>
         <label for="id" class="title"> ID</label>
-        <input type="text" ref="id" id="id" />
+        <input type="text" ref="id" id="id" name="id"/>
       </div>
       <div>
         <label for="name" class="title">Name</label>
-        <input type="text" ref="name" id="name" />
+        <input type="text" ref="name" id="name" name="name"/>
       </div>
       <div>
         <label for="pass" class="title">Password</label>
-        <input type="password" ref="pass" id="pass" />
+        <input type="password" ref="pass" id="pass" name="pass"/>
       </div>
       <div>
         <label for="repass" class="title">Re Password</label>
-        <input type="password" ref="repass" id="repass" />
+        <input type="password" ref="repass" id="repass"  />
       </div>
       <div>
         <label for="" class="title">Mobile</label>
-        <select v-model="selected" name="mobile" id="mobile" ref="m1">
+        <select v-model="selected" id="mobile" ref="m1">
           <option v-for="(item, i) in mobileList" :value="item" :key="i">
             {{ item }}
           </option>
@@ -35,7 +35,7 @@
       <div>
         <label class="title"></label
         ><!-- 공백-->
-        <button ref="btnJoin" type="submit" @click.prevent="join" class="btn-margin">
+        <button ref="btnJoin"  @click.prevent="join" class="btn-margin">
           가입
         </button>
         <button type="reset" ref="btnCancel">취소</button>
@@ -103,7 +103,7 @@ export default{
           alert('Mobile(을)를 확인해주세요')
           return
         }
-    
+    mobile.value.value = m1.value.value+m2.value.value+m3.value.value
    frm.value.submit()
   }
     

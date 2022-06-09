@@ -1,5 +1,6 @@
 <template>
  <div id="nav">
+   
   <ul>
     <li>
       <router-link to="/">Home</router-link>
@@ -9,6 +10,9 @@
     </li>
     <li>
       <router-link to="/login">Login</router-link>
+    </li>
+    <li>
+      <router-link to="/list">List</router-link>
     </li>
     <li>
       <router-link to="/about">About</router-link>

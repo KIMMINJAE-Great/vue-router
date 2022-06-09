@@ -9,11 +9,11 @@
         <legend>Login</legend>
         <div>
           <label for="id" class="title"> ID</label>
-          <input type="text" ref="id" id="id" />
+          <input type="text" ref="id" id="id" name="id"/>
         </div>
         <div>
           <label for="pass" class="title">Password</label>
-          <input type="password" ref="pass" id="pass" />
+          <input type="password" ref="pass" id="pass" name="pass"/>
         </div>
         <button type="submit" @click.prevent="login">로그인</button>
         <button  @click.prevent="goJoin">회원가입</button>
